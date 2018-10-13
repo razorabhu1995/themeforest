@@ -6,9 +6,9 @@
       <br>
         <div class="Wallop Wallop--scale">
                 <div class="Wallop-list">
-                     <carousel :per-page="1" mouse-drag="true">
+                     <carousel :per-page="1" :autoplay="true" :navigationEnabled="true"  :mouse-drag="true">
                         <slide>
-                        <div class="Wallop-item Wallop-item--current has-background-image" data-background="https://via.placeholder.com/1920x1080">
+                            <div class="Wallop-item Wallop-item--current has-background-image" data-background="https://via.placeholder.com/1920x1080">
                                 <div class="Wallop-overlay"></div>
                                 <div class="Wallop-caption-wrapper">
                                     <div class="Wallop-caption is-centered">
@@ -135,7 +135,8 @@
       <!-- /Hero Wallop Slider -->
   </div>
   <!-- /Hero and nav -->
-
+    <br>
+    <br>
   <!-- Clients references -->
   <div class="hero-foot is-pulled">
       <div class="container">
