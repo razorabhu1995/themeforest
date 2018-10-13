@@ -14,14 +14,11 @@ module.exports = {
       { hid: 'description', name: 'description', content: pkg.description }
     ],
     script: [
-      { src: '/plugins/agency.js' },
-      { src: '/plugins/contact.js' },
-      { src: '/plugins/main.js' },
       { src: 'https://maps.google.com/maps/api/js?key=AIzaSyAGLO_M5VT7BsVdjMjciKoH1fFJWWdhDPU' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
-      { rel: 'stylesheet', href: '../assets/css/icons.min.css' },
+      { rel: 'stylesheet', href: '/icons.min.css' },
     ]
   },
 
@@ -35,7 +32,7 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    '~/assets/css/icons.min.css',
+    '../assets/css/icons.min.css',
     '../assets/scss/core_flashy.scss'
   ],
 
@@ -44,9 +41,10 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    // { src: '~/plugins/agency.js' },
-    // { src: '~/plugins/contact.js' },
-    // { src: '~/plugins/main.js' },
+    // { src: '~/plugins/agency.js' , ssr : false},
+    // { src: '~/plugins/contact.js', ssr :  false },
+    // { src: '~/plugins/main.js', ssr: false },
+    { src: '~/plugins/vue-carousel.js', ssr: false }
   ],
 
   /*
@@ -71,13 +69,14 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    postcss: {
-      preset: {
-        features: {
-          customProperties: false
-        }
-      }
-    },
+    // postcss: {
+    //   preset: {
+    //     features: {
+    //       customProperties: false
+    //     }
+    //   }
+    // },
+    extractCSS: true,
     /*
     ** You can extend webpack config here
     */

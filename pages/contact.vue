@@ -3,6 +3,14 @@
     <div class="hero parallax is-cover is-relative is-default is-bold" data-background="https://via.placeholder.com/1920x1080" data-color="#000" data-color-opacity="0.3">
 
     <app-navbar-fade></app-navbar-fade>
+    <carousel :per-page="1" mouse-drag="false">
+        <slide>
+        Slide 1 Content
+        </slide>
+        <slide>
+        Slide 2 Content
+        </slide>
+    </carousel>
 
     <!-- Hero image -->
     <div id="main-hero" class="hero-body ">
@@ -160,13 +168,20 @@ import NavbarFade from "~/components/Navbar-fade-dark.vue";
 import Footer from "~/components/Footer-dark.vue";
 
 export default {
+  data() {
+    return {
+      showCarousel: false
+    };
+  },
+  mounted() {
+    this.showCarousel = true;
+  },
   components: {
     "app-navbar-fade": NavbarFade,
-    "app-footer" :  Footer
+    "app-footer": Footer
   }
 };
 </script>
 
 <style>
-
 </style>

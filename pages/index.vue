@@ -3,12 +3,75 @@
     <div class="hero is-cover is-relative is-fullheight is-default is-bold">
     
       <app-navbar-fade></app-navbar-fade>
+      <br>
+        <div class="Wallop Wallop--scale">
+                <div class="Wallop-list">
+                     <carousel :per-page="1" mouse-drag="true">
+                        <slide>
+                        <div class="Wallop-item Wallop-item--current has-background-image" data-background="https://via.placeholder.com/1920x1080">
+                                <div class="Wallop-overlay"></div>
+                                <div class="Wallop-caption-wrapper">
+                                    <div class="Wallop-caption is-centered">
+                                        <div class="main-inner">
+                                            <h1>We are a Creative agency</h1>
+                                        </div>
+                                        <div>
+                                            <h4>We create magnificent products that will sublime your business</h4>
+                                        </div>
+                                        <div class="caption-action">
+                                            <a href="#services" class="button button-cta btn-align light-btn btn-outlined is-bold rounded">Get Started</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </slide>
+                        <slide>
+                            <div class="Wallop-item has-background-image" data-background="https://via.placeholder.com/1920x1080">
+                                <div class="Wallop-overlay"></div>
+                                <div class="Wallop-caption-wrapper">
+                                    <div class="Wallop-caption is-centered">
+                                        <div class="main-inner">
+                                            <h1>Looking for epic design ?</h1>
+                                        </div>
+                                        <div>
+                                            <h4>Hire our team of specialists to get the best from the web</h4>
+                                        </div>
+                                        <div class="caption-action">
+                                            <a href="#services" class="button button-cta btn-align light-btn btn-outlined is-bold rounded">Get Started</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </slide>
+                        <slide>
+                            <div class="Wallop-item has-background-image" data-background="https://via.placeholder.com/1920x1080">
+                                <div class="Wallop-overlay"></div>
+                                <div class="Wallop-caption-wrapper">
+                                    <div class="Wallop-caption is-centered">
+                                        <div class="main-inner">
+                                            <h1>You're at the right place</h1>
+                                        </div>
+                                        <div>
+                                            <h4>Our products are mentionned for their code and design quality </h4>
+                                        </div>
+                                        <div class="caption-action">
+                                            <a href="#services" class="button button-cta btn-align light-btn btn-outlined is-bold rounded">Get Started</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </slide>
+                    </carousel>
+                </div>
+        </div>
+   
+        
 
       <!-- Hero Wallop Slider -->
-      <div class="Wallop Wallop--scale">
-          <div class="Wallop-list">
+      <!-- <div class="Wallop Wallop--scale">
+          <div class="Wallop-list"> -->
               <!-- Slide -->
-              <div class="Wallop-item Wallop-item--current has-background-image" data-background="https://via.placeholder.com/1920x1080">
+              <!-- <div class="Wallop-item Wallop-item--current has-background-image" data-background="https://via.placeholder.com/1920x1080">
                   <div class="Wallop-overlay"></div>
                   <div class="Wallop-caption-wrapper">
                       <div class="Wallop-caption is-centered">
@@ -23,9 +86,9 @@
                           </div>
                       </div>
                   </div>
-              </div>
+              </div> -->
               <!-- Slide -->
-              <div class="Wallop-item has-background-image" data-background="https://via.placeholder.com/1920x1080">
+              <!-- <div class="Wallop-item has-background-image" data-background="https://via.placeholder.com/1920x1080">
                   <div class="Wallop-overlay"></div>
                   <div class="Wallop-caption-wrapper">
                       <div class="Wallop-caption is-centered">
@@ -40,9 +103,9 @@
                           </div>
                       </div>
                   </div>
-              </div>
+              </div> -->
               <!-- Slide -->
-              <div class="Wallop-item has-background-image" data-background="https://via.placeholder.com/1920x1080">
+              <!-- <div class="Wallop-item has-background-image" data-background="https://via.placeholder.com/1920x1080">
                   <div class="Wallop-overlay"></div>
                   <div class="Wallop-caption-wrapper">
                       <div class="Wallop-caption is-centered">
@@ -58,17 +121,17 @@
                       </div>
                   </div>
               </div>
-          </div>
+          </div> -->
           <!-- Pagination dots -->
-          <div class="Wallop-pagination">
+          <!-- <div class="Wallop-pagination">
               <button class="Wallop-dot Wallop-dot--current">go to item 1</button>
               <button class="Wallop-dot">go to item 2</button>
               <button class="Wallop-dot">go to item 3</button>      
-          </div>
+          </div> -->
           <!-- Navigation arrows -->
-          <button class="Wallop-buttonPrevious is-hidden-mobile"><i class="material-icons">arrow_back</i></button>
+          <!-- <button class="Wallop-buttonPrevious is-hidden-mobile"><i class="material-icons">arrow_back</i></button>
           <button class="Wallop-buttonNext is-hidden-mobile"><i class="material-icons">arrow_forward</i></button>
-      </div>
+      </div> -->
       <!-- /Hero Wallop Slider -->
   </div>
   <!-- /Hero and nav -->
@@ -832,17 +895,20 @@
 </template>
 
 <script>
-import NavbarFade from "~/components/Navbar-fade.vue";
+import NavbarFade from "~/components/Navbar-fade-dark.vue";
 import Footer from "~/components/Footer-dark.vue";
 
 export default {
+  data() {
+    return {};
+  },
+  mounted() {},
   components: {
     "app-navbar-fade": NavbarFade,
-    "app-footer" :  Footer
+    "app-footer": Footer
   }
 };
 </script>
 
 <style>
-
 </style>
